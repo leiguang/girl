@@ -46,4 +46,11 @@ public class GirlService {
 
         return age;
     }
+
+    /**
+     * 通过 Id 查询一个女生的信息
+     */
+    public Girl findById(Integer id) {
+        return girlRepository.findById(id).orElse(null);
+    }
 }
